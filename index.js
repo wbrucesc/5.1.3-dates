@@ -1,4 +1,5 @@
-var moment = require("moment");
+const moment = require("moment");
+const chalk = require("chalk");
 
 
 var pre = "It is ";
@@ -15,24 +16,24 @@ var leap = moment().isLeapYear();
 
 function timeOfYear(daylight){
   if (daylight === true){
-    return pre + "during Daylight Savings Time.";
+    return "It" + chalk.green(" is ") + "during Daylight Savings Time.";
   } else {
-    return pre + "not Daylight Savings Time.";
+    return "It" + chalk.green(" is not ") + "not Daylight Savings Time.";
   }
 }
 
 function feelingFroggy(leap){
   if (leap === true){
-    return pre + "a leap year.";
+    return  "It" + chalk.red(" is ") + "a leap year.";
   } else {
-    return pre + "not a leap year.";
+    return "It" + chalk.red(" is not ") + "a leap year.";
   }
 }
 
 
-console.log(pre + firstLine + ".");
-console.log(pre + "the " + secondLine + " day of the year.");
-console.log(pre + timeInSeconds +
+console.log(pre + chalk.blue(firstLine) + ".");
+console.log(pre + "the " + chalk.magenta(secondLine) + " day of the year.");
+console.log(pre + chalk.cyan(timeInSeconds) +
 " seconds into the day.");
 console.log(timeOfYear(daylight));
 console.log(feelingFroggy(leap));
