@@ -1,0 +1,16 @@
+{
+  "name": "5.1.3-dates",
+  "version": "1.0.0",
+  "description": "dates assignment ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Will Bruce",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "moment": "^2.18.1"
+  }
+}
